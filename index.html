@@ -1,57 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Weekend Loading...</title>
-  <meta http-equiv="refresh" content="6;url=https://google.com" />
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #1e1e2f;
-      font-family: 'Segoe UI', sans-serif;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5em;
-      animation: pulse 1.5s infinite;
-    }
-    .brainpower {
-      margin-top: 20px;
-      font-size: 1.2em;
-      opacity: 0.7;
-    }
-    .loader {
-      margin-top: 30px;
-      width: 60px;
-      height: 60px;
-      border: 6px solid #fff;
-      border-top-color: transparent;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.8; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-    @keyframes spin {
-      to { transform: rotate(360deg); }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Friday Brain Power 🚀</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+  body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    font-family: 'Fredoka One', cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    padding: 20px;
+  }
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0.2em;
+  }
+  h2 {
+    font-weight: 400;
+    margin-bottom: 1em;
+  }
+  #countdown {
+    font-size: 2.5rem;
+    margin: 1em 0 2em;
+    letter-spacing: 2px;
+  }
+  #cta {
+    background: #ffca28;
+    color: #333;
+    padding: 1em 2em;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255,202,40,0.5);
+    transition: background 0.3s ease;
+    user-select: none;
+  }
+  #cta:hover {
+    background: #ffb300;
+  }
+  #video-container {
+    margin-top: 2em;
+    max-width: 480px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(255,255,255,0.3);
+  }
+  video {
+    width: 100%;
+    display: block;
+  }
+  footer {
+    margin-top: 3em;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+</style>
 </head>
 <body>
-  <h1>🧠 Friday Brain Power at 3%...</h1>
-  <div class="brainpower">Initiating Weekend Protocol</div>
-  <div class="loader"></div>
-  <p style="margin-top: 40px; font-size: 0.9em; opacity: 0.5;">
-    Redirecting to your mission debrief in 6 seconds...
-  </p>
+  <h1>🚀 Friday Brain Power Activated! 🚀</h1>
+  <h2>Hey Leah, Yvette, Jakob & Brennen — The weekend is loading...<br>But first, let's crush that aged claims report!</h2>
+  
+  <div id="countdown">Loading...</div>
+  
+  <button id="cta" onclick="alert('Remember to finish the aged claims report before you sign off!')">
+    Finish the Aged Claims Report Before Signing Off
+  </button>
+  
+  <div id="video-container">
+    <video autoplay muted loop playsinline>
+      <source src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <footer>Have a great weekend — but don’t forget the report! 🙌</footer>
+  
+<script>
+  // Countdown timer to next Friday 5 PM
+  function getNextFridayFivePM() {
+    const now = new Date();
+    const day = now.getDay();
+    const daysUntilFriday = (5 - day + 7) % 7 || 7; // 5 = Friday
+    const nextFriday = new Date(now);
+    nextFriday.setDate(now.getDate() + daysUntilFriday);
+    nextFriday.setHours(17, 0, 0, 0); // 5 PM
+    return nextFriday;
+  }
+
+  function updateCountdown() {
+    const now = new Date();
+    const target = getNextFridayFivePM();
+    const diff = target - now;
+    if(diff <= 0) {
+      document.getElementById('countdown').textContent = "Weekend's here! 🎉";
+      return;
+    }
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('countdown').textContent = 
+      `${hours.toString().padStart(2,'0')} : ${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}`;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
+  // Redirect after 8 seconds to Google
+  setTimeout(() => {
+    window.location.href = 'https://www.google.com';
+  }, 8000);
+</script>
 </body>
 </html>
