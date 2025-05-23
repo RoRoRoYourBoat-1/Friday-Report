@@ -1,133 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Friday Low Battery Brain Power 🔋</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
-  body {
-    background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
-    color: #f0f0f0;
-    font-family: 'Fredoka One', cursive, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    text-align: center;
-    padding: 20px;
-  }
-  h1 {
-    font-size: 3rem;
-    margin-bottom: 0.1em;
-    color: #ff4d4d;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  .battery-icon {
-    font-size: 3rem;
-  }
-  h2 {
-    font-weight: 400;
-    margin-bottom: 1.2em;
-    font-size: 1.6rem;
-  }
-  #countdown {
-    font-size: 3rem;
-    margin: 1em 0 2em;
-    letter-spacing: 3px;
-    font-weight: 700;
-    color: #ff4d4d;
-    font-family: monospace, monospace;
-  }
-  #cta {
-    background: #ff4d4d;
-    color: #fff;
-    padding: 1em 2.5em;
-    font-size: 1.3rem;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(255,77,77,0.6);
-    transition: background 0.3s ease;
-    user-select: none;
-  }
-  #cta:hover {
-    background: #e04343;
-  }
-  #video-container {
-    margin-top: 2.5em;
-    max-width: 520px;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(255,77,77,0.4);
-  }
-  video {
-    width: 100%;
-    display: block;
-  }
-  footer {
-    margin-top: 3em;
-    font-size: 0.95rem;
-    opacity: 0.7;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friday Low Battery Brain Power 🔋</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+    body {
+      background: linear-gradient(135deg, #3a3a3a, #1c1c1c);
+      color: #f0f0f0;
+      font-family: 'Fredoka One', cursive, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.1em;
+      color: #ff4d4d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .battery-icon {
+      font-size: 3rem;
+    }
+    h2 {
+      font-weight: 400;
+      margin-bottom: 1.2em;
+      font-size: 1.6rem;
+    }
+    #countdown {
+      font-size: 3rem;
+      margin: 1em 0 2em;
+      letter-spacing: 3px;
+      font-weight: 700;
+      color: #ff4d4d;
+      font-family: monospace, monospace;
+    }
+    #cta {
+      background: #ff4d4d;
+      color: #fff;
+      padding: 1em 2.5em;
+      font-size: 1.3rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255,77,77,0.6);
+      transition: background 0.3s ease;
+      user-select: none;
+      text-decoration: none;
+      display: inline-block;
+    }
+    #cta:hover {
+      background: #e04343;
+    }
+    #video-container {
+      margin-top: 2.5em;
+      max-width: 520px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(255,77,77,0.4);
+    }
+    video {
+      width: 100%;
+      display: block;
+    }
+    footer {
+      margin-top: 3em;
+      font-size: 0.95rem;
+      opacity: 0.7;
+    }
+  </style>
 </head>
 <body>
   <h1><span class="battery-icon">🔋</span> Friday Brain Power Low Battery!</h1>
   <h2>Hey Leah, Yvette, Jakob & Brennen — Clock's ticking! The weekend starts soon, but first... finish the aged claims report!</h2>
-  
+
   <div id="countdown">Loading...</div>
-  
-  <button id="cta" onclick="alert('Remember to finish the aged claims report before you sign off!')">
-    Finish the Aged Claims Report Before Signing Off
-  </button>
-  
+
+  <a id="cta" href="https://macrohealth-my.sharepoint.com/:x:/p/leah_ebenhoeh/EViWyISNJW9DpMbZWpyZBWgB7ZdezwHhhd5Ud0bGjiMNGA?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1728051756025&web=1" target="_blank">
+    Go to Aged Claims Report
+  </a>
+
   <div id="video-container">
     <video autoplay muted loop playsinline>
-      <source src="https://cdn.videvo.net/videvo_files/video/free/2019-08/small_watermarked/190630_03_Office_4k_023_preview.webm" type="video/webm" />
-      <source src="https://cdn.videvo.net/videvo_files/video/free/2019-08/small_watermarked/190630_03_Office_4k_023_preview.mp4" type="video/mp4" />
+      <source src="https://cdn.pixabay.com/video/2023/01/03/144256-791332654_large.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
   </div>
-  
+
   <footer>We get off at 5 PM today. Weekend loading... hang in there! 🙌</footer>
-  
-<script>
-  // Countdown timer to today Friday 5 PM
-  function getTodayFivePM() {
-    const now = new Date();
-    const fivePM = new Date(now);
-    fivePM.setHours(17, 0, 0, 0); // 5 PM today
-    return fivePM;
-  }
 
-  function updateCountdown() {
-    const now = new Date();
-    const target = getTodayFivePM();
-    const diff = target - now;
-    if (diff <= 0) {
-      document.getElementById('countdown').textContent = "Weekend's here! 🎉";
-      return;
+  <script>
+    // Countdown to Friday 5 PM today
+    function getTodayFivePM() {
+      const now = new Date();
+      const fivePM = new Date(now);
+      fivePM.setHours(17, 0, 0, 0);
+      return fivePM;
     }
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-    document.getElementById('countdown').textContent =
-      `${hours.toString().padStart(2,'0')} : ${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}`;
-  }
 
-  setInterval(updateCountdown, 1000);
-  updateCountdown();
+    function updateCountdown() {
+      const now = new Date();
+      const target = getTodayFivePM();
+      const diff = target - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').textContent = "Weekend's here! 🎉";
+        return;
+      }
+      const hours = Math.floor(diff / (1000 * 60 * 60));
+      const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      document.getElementById('countdown').textContent =
+        `${hours.toString().padStart(2,'0')} : ${minutes.toString().padStart(2,'0')} : ${seconds.toString().padStart(2,'0')}`;
+    }
 
-  // Redirect after 6 seconds to Google
-  setTimeout(() => {
-    window.location.href = 'https://www.google.com';
-  }, 6000);
-</script>
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // Redirect to SharePoint after 6 seconds
+    setTimeout(() => {
+      window.location.href = "https://macrohealth-my.sharepoint.com/:x:/p/leah_ebenhoeh/EViWyISNJW9DpMbZWpyZBWgB7ZdezwHhhd5Ud0bGjiMNGA?wdOrigin=TEAMS-MAGLEV.p2p_ns.rwc&wdExp=TEAMS-TREATMENT&wdhostclicktime=1728051756025&web=1";
+    }, 6000);
+  </script>
 </body>
 </html>
